@@ -21,7 +21,9 @@ const db = mysql.createConnection(
     console.log('Connected to the election database.')
 )
 
-
+db.query(`SELECT * FROM candidates`, (err, rows) => {
+    console.log(rows);
+})
 // below used to confirm connection to Express.js
 // app.get('/', (req, res) => {
 //     res.json({
